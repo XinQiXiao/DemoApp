@@ -11,6 +11,10 @@
 		9953548220501BF500522523 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9953548120501BF500522523 /* Assets.xcassets */; };
 		9953548520501BF500522523 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9953548320501BF500522523 /* LaunchScreen.storyboard */; };
 		9953548820501BF500522523 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9953548720501BF500522523 /* main.m */; };
+		9953549620501E3C00522523 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9953549520501E3C00522523 /* BaseViewController.m */; };
+		9953549920501E6700522523 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9953549820501E6700522523 /* MainViewController.m */; };
+		9953549C20501FC600522523 /* MediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9953549B20501FC600522523 /* MediaViewController.m */; };
+		995354A1205023B800522523 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995354A0205023B800522523 /* PhotoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,15 @@
 		9953548420501BF500522523 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9953548620501BF500522523 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9953548720501BF500522523 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9953549420501E3C00522523 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		9953549520501E3C00522523 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		9953549720501E6700522523 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		9953549820501E6700522523 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		9953549A20501FC600522523 /* MediaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediaViewController.h; sourceTree = "<group>"; };
+		9953549B20501FC600522523 /* MediaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediaViewController.m; sourceTree = "<group>"; };
+		9953549E2050210E00522523 /* Contants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contants.h; sourceTree = "<group>"; };
+		9953549F205023B800522523 /* PhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		995354A0205023B800522523 /* PhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +66,7 @@
 		9953547D20501BF400522523 /* DemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				9953548E20501D9500522523 /* classes */,
 				9953547E20501BF500522523 /* AppDelegate.h */,
 				9953547F20501BF500522523 /* AppDelegate.m */,
 				9953548120501BF500522523 /* Assets.xcassets */,
@@ -61,6 +75,70 @@
 				9953548720501BF500522523 /* main.m */,
 			);
 			path = DemoApp;
+			sourceTree = "<group>";
+		};
+		9953548E20501D9500522523 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				9953549D205020A700522523 /* utils */,
+				9953549220501E0600522523 /* components */,
+				9953548F20501DA900522523 /* controllers */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		9953548F20501DA900522523 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9953549120501DDF00522523 /* main */,
+				9953549020501DD100522523 /* media */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		9953549020501DD100522523 /* media */ = {
+			isa = PBXGroup;
+			children = (
+				9953549A20501FC600522523 /* MediaViewController.h */,
+				9953549B20501FC600522523 /* MediaViewController.m */,
+				9953549F205023B800522523 /* PhotoViewController.h */,
+				995354A0205023B800522523 /* PhotoViewController.m */,
+			);
+			path = media;
+			sourceTree = "<group>";
+		};
+		9953549120501DDF00522523 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				9953549720501E6700522523 /* MainViewController.h */,
+				9953549820501E6700522523 /* MainViewController.m */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		9953549220501E0600522523 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				9953549320501E1800522523 /* base */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		9953549320501E1800522523 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				9953549420501E3C00522523 /* BaseViewController.h */,
+				9953549520501E3C00522523 /* BaseViewController.m */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		9953549D205020A700522523 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				9953549E2050210E00522523 /* Contants.h */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +212,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9953548820501BF500522523 /* main.m in Sources */,
+				9953549620501E3C00522523 /* BaseViewController.m in Sources */,
 				9953548020501BF500522523 /* AppDelegate.m in Sources */,
+				995354A1205023B800522523 /* PhotoViewController.m in Sources */,
+				9953549920501E6700522523 /* MainViewController.m in Sources */,
+				9953549C20501FC600522523 /* MediaViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
