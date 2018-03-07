@@ -1,0 +1,18 @@
+
+# VSCode
+.vscode
+
+# Xcode
+#
+build/
+*.pbxuser
+!default.pbxuser
+
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+project.xcworkspace
