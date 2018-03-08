@@ -31,6 +31,7 @@
     UIButton *pickBtn = [[UIButton alloc]initWithFrame:CGRectMake(100, pickOriginY, 100, pickHeight)];
     [pickBtn setTitle:@"采集图片" forState:(UIControlStateNormal)];
     [pickBtn setTitleColor:[UIColor blueColor] forState:(UIControlStateNormal)];
+    [pickBtn setTitleColor:[UIColor redColor] forState:(UIControlStateHighlighted)];
     [pickBtn addTarget:self action:@selector(pickPhoto) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:pickBtn];
     
@@ -42,7 +43,7 @@
 }
 
 // 懒加载
--(UIImagePickerController *)getImagePickerController{
+-(UIImagePickerController *)imagePickerController{
     if(!_imagePickerController){
         _imagePickerController = [UIImagePickerController new];
         
@@ -57,12 +58,40 @@
 }
 
 -(void)pickPhoto{
-    
+    // 通过摄像头来采集
+    if([UIImagePickerController isSourceTypeAvailable:(UIImagePickerControllerSourceTypeCamera)]){
+        _imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
+    // 通过图片库来采集
+    else {
+        _imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    [self presentViewController:self.imagePickerController animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark --- ---
+#pragma mark --- UIImagePickerControllerDelegate ---
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    // 获取媒体类型
+    NSString *type = info[UIImagePickerControllerMediaType];
+    // 如果是图片类型
+    if([type isEqualToString:(__bridge NSString*)kUTTypeImage]){
+        // 获取采集到的图片
+        UIImage *img = info[UIImagePickerControllerOriginalImage];
+        // 显示
+        _imageView.image = img;
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+#pragma mark --- ---
 
 @end
