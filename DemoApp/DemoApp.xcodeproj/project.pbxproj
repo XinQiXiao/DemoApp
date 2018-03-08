@@ -15,6 +15,7 @@
 		9953549920501E6700522523 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9953549820501E6700522523 /* MainViewController.m */; };
 		9953549C20501FC600522523 /* MediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9953549B20501FC600522523 /* MediaViewController.m */; };
 		995354A1205023B800522523 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995354A0205023B800522523 /* PhotoViewController.m */; };
+		999D8EC52050E8FF00A21863 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 999D8EC42050E8FF00A21863 /* TestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		9953549E2050210E00522523 /* Contants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contants.h; sourceTree = "<group>"; };
 		9953549F205023B800522523 /* PhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
 		995354A0205023B800522523 /* PhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		999D8EC32050E8FF00A21863 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		999D8EC42050E8FF00A21863 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,7 @@
 		9953548F20501DA900522523 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				999D8EC22050E8E100A21863 /* test */,
 				9953549120501DDF00522523 /* main */,
 				9953549020501DD100522523 /* media */,
 			);
@@ -139,6 +143,15 @@
 				9953549E2050210E00522523 /* Contants.h */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		999D8EC22050E8E100A21863 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				999D8EC32050E8FF00A21863 /* TestViewController.h */,
+				999D8EC42050E8FF00A21863 /* TestViewController.m */,
+			);
+			path = test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +226,7 @@
 			files = (
 				9953548820501BF500522523 /* main.m in Sources */,
 				9953549620501E3C00522523 /* BaseViewController.m in Sources */,
+				999D8EC52050E8FF00A21863 /* TestViewController.m in Sources */,
 				9953548020501BF500522523 /* AppDelegate.m in Sources */,
 				995354A1205023B800522523 /* PhotoViewController.m in Sources */,
 				9953549920501E6700522523 /* MainViewController.m in Sources */,
