@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3E23CA6A2F667BA1F0F42B17 /* libPods-DemoApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C7934BBCB5113582DFA603 /* libPods-DemoApp.a */; };
+		99087F2A205279E4000423DC /* MasDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99087F29205279E4000423DC /* MasDemoViewController.m */; };
+		99087F2E20527A81000423DC /* AutoLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99087F2C20527A81000423DC /* AutoLayoutViewController.m */; };
+		99087F2F20527A81000423DC /* AutoLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99087F2D20527A81000423DC /* AutoLayoutViewController.xib */; };
+		99087F322052A2D1000423DC /* MasTableViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99087F312052A2D1000423DC /* MasTableViewViewController.m */; };
 		9953548020501BF500522523 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9953547F20501BF500522523 /* AppDelegate.m */; };
 		9953548220501BF500522523 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9953548120501BF500522523 /* Assets.xcassets */; };
 		9953548520501BF500522523 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9953548320501BF500522523 /* LaunchScreen.storyboard */; };
@@ -22,6 +26,13 @@
 /* Begin PBXFileReference section */
 		08B103A4231A899D5442B72D /* Pods-DemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoApp/Pods-DemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		61C7934BBCB5113582DFA603 /* libPods-DemoApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99087F28205279E4000423DC /* MasDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasDemoViewController.h; sourceTree = "<group>"; };
+		99087F29205279E4000423DC /* MasDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasDemoViewController.m; sourceTree = "<group>"; };
+		99087F2B20527A81000423DC /* AutoLayoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoLayoutViewController.h; sourceTree = "<group>"; };
+		99087F2C20527A81000423DC /* AutoLayoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutViewController.m; sourceTree = "<group>"; };
+		99087F2D20527A81000423DC /* AutoLayoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoLayoutViewController.xib; sourceTree = "<group>"; };
+		99087F302052A2D1000423DC /* MasTableViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasTableViewViewController.h; sourceTree = "<group>"; };
+		99087F312052A2D1000423DC /* MasTableViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasTableViewViewController.m; sourceTree = "<group>"; };
 		9953547B20501BF400522523 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9953547E20501BF500522523 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9953547F20501BF500522523 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -174,6 +185,13 @@
 			children = (
 				999D8EC32050E8FF00A21863 /* TestViewController.h */,
 				999D8EC42050E8FF00A21863 /* TestViewController.m */,
+				99087F28205279E4000423DC /* MasDemoViewController.h */,
+				99087F29205279E4000423DC /* MasDemoViewController.m */,
+				99087F2B20527A81000423DC /* AutoLayoutViewController.h */,
+				99087F2C20527A81000423DC /* AutoLayoutViewController.m */,
+				99087F2D20527A81000423DC /* AutoLayoutViewController.xib */,
+				99087F302052A2D1000423DC /* MasTableViewViewController.h */,
+				99087F312052A2D1000423DC /* MasTableViewViewController.m */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -241,6 +259,7 @@
 			files = (
 				9953548220501BF500522523 /* Assets.xcassets in Resources */,
 				9953548520501BF500522523 /* LaunchScreen.storyboard in Resources */,
+				99087F2F20527A81000423DC /* AutoLayoutViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +327,10 @@
 				9953548020501BF500522523 /* AppDelegate.m in Sources */,
 				995354A1205023B800522523 /* PhotoViewController.m in Sources */,
 				9953549920501E6700522523 /* MainViewController.m in Sources */,
+				99087F2E20527A81000423DC /* AutoLayoutViewController.m in Sources */,
 				9953549C20501FC600522523 /* MediaViewController.m in Sources */,
+				99087F322052A2D1000423DC /* MasTableViewViewController.m in Sources */,
+				99087F2A205279E4000423DC /* MasDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

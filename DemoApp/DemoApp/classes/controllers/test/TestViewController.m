@@ -7,7 +7,7 @@
 //
 
 #import "TestViewController.h"
-#import <Masonry.h>
+
 
 @interface TestViewController ()
 
@@ -18,6 +18,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Test";
+    NSLayoutConstraint *a =[NSLayoutConstraint new];
+    NSString *str = @"aaa";
+    NSString *copyStr = [str copy];
+    NSLog(@"str = %@ copyStr= %@",str,copyStr);
+    NSLog(@"str = %p copyStr= %p",str,copyStr);
+    NSLog(@"指针地址：str = %p copyStr= %p",&str,&copyStr);
+    copyStr = @"bbb";
+    NSLog(@"after str = %@ copyStr= %@",str,copyStr);
+    NSLog(@"after str = %p copyStr= %p",str,copyStr);
+    NSLog(@"after 指针地址：str = %p copyStr= %p",&str,&copyStr);
 }
 
 - (void)didReceiveMemoryWarning {

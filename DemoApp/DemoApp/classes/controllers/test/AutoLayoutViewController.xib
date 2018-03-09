@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AutoLayoutViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="测试" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfI-Eu-32R">
+                    <rect key="frame" x="128" y="70" width="120" height="40"/>
+                    <color key="backgroundColor" red="0.99602099775401431" green="1" blue="0.26482515515124316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="eEa-25-Rqh"/>
+                        <constraint firstAttribute="height" constant="40" id="o6r-Kc-Qpf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZW-AN-QFl">
+                    <rect key="frame" x="147.5" y="130" width="80" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Xld-bk-edZ"/>
+                        <constraint firstAttribute="width" constant="80" id="nFC-Wn-5rr"/>
+                    </constraints>
+                    <state key="normal" title="点击">
+                        <color key="titleColor" red="0.99602099779999997" green="1" blue="0.2648251552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Th1-cD-uOa">
+                    <rect key="frame" x="67.5" y="220" width="240" height="240"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="8DZ-aF-W9g"/>
+                        <constraint firstAttribute="height" constant="240" id="n4p-S2-myI"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cfI-Eu-32R" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="50" id="Gk5-fj-Tsx"/>
+                <constraint firstItem="bZW-AN-QFl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Zrv-zG-83c"/>
+                <constraint firstItem="cfI-Eu-32R" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bsY-Bk-LxK"/>
+                <constraint firstItem="Th1-cD-uOa" firstAttribute="top" secondItem="bZW-AN-QFl" secondAttribute="bottom" constant="50" id="ojS-m9-ZEs"/>
+                <constraint firstItem="Th1-cD-uOa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rJK-2s-xhS"/>
+                <constraint firstItem="bZW-AN-QFl" firstAttribute="top" secondItem="cfI-Eu-32R" secondAttribute="bottom" constant="20" id="xwZ-If-LEJ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+        <view contentMode="scaleToFill" id="4A8-cU-baL">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <viewLayoutGuide key="safeArea" id="hI2-En-bSG"/>
+            <point key="canvasLocation" x="216" y="-34"/>
+        </view>
+    </objects>
+</document>
