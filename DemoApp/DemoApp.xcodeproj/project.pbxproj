@@ -21,6 +21,9 @@
 		9953549C20501FC600522523 /* MediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9953549B20501FC600522523 /* MediaViewController.m */; };
 		995354A1205023B800522523 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995354A0205023B800522523 /* PhotoViewController.m */; };
 		999D8EC52050E8FF00A21863 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 999D8EC42050E8FF00A21863 /* TestViewController.m */; };
+		99AA823E2056595000723E84 /* TableViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AA823D2056595000723E84 /* TableViewViewController.m */; };
+		99AA824220566E0B00723E84 /* MasTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AA824120566E0B00723E84 /* MasTableViewCell.m */; };
+		99AA82452056849000723E84 /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AA82442056849000723E84 /* ScrollViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +54,12 @@
 		995354A0205023B800522523 /* PhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		999D8EC32050E8FF00A21863 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		999D8EC42050E8FF00A21863 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		99AA823C2056595000723E84 /* TableViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewViewController.h; sourceTree = "<group>"; };
+		99AA823D2056595000723E84 /* TableViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewViewController.m; sourceTree = "<group>"; };
+		99AA824020566E0B00723E84 /* MasTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasTableViewCell.h; sourceTree = "<group>"; };
+		99AA824120566E0B00723E84 /* MasTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasTableViewCell.m; sourceTree = "<group>"; };
+		99AA82432056849000723E84 /* ScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
+		99AA82442056849000723E84 /* ScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
 		C9A4626CF0238E1F60108572 /* Pods-DemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoApp/Pods-DemoApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,8 +192,18 @@
 		999D8EC22050E8E100A21863 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				99AA823F20566C7900723E84 /* masonryTest */,
 				999D8EC32050E8FF00A21863 /* TestViewController.h */,
 				999D8EC42050E8FF00A21863 /* TestViewController.m */,
+				99AA823C2056595000723E84 /* TableViewViewController.h */,
+				99AA823D2056595000723E84 /* TableViewViewController.m */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		99AA823F20566C7900723E84 /* masonryTest */ = {
+			isa = PBXGroup;
+			children = (
 				99087F28205279E4000423DC /* MasDemoViewController.h */,
 				99087F29205279E4000423DC /* MasDemoViewController.m */,
 				99087F2B20527A81000423DC /* AutoLayoutViewController.h */,
@@ -192,8 +211,12 @@
 				99087F2D20527A81000423DC /* AutoLayoutViewController.xib */,
 				99087F302052A2D1000423DC /* MasTableViewViewController.h */,
 				99087F312052A2D1000423DC /* MasTableViewViewController.m */,
+				99AA824020566E0B00723E84 /* MasTableViewCell.h */,
+				99AA824120566E0B00723E84 /* MasTableViewCell.m */,
+				99AA82432056849000723E84 /* ScrollViewController.h */,
+				99AA82442056849000723E84 /* ScrollViewController.m */,
 			);
-			path = test;
+			path = masonryTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,13 +345,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9953548820501BF500522523 /* main.m in Sources */,
+				99AA82452056849000723E84 /* ScrollViewController.m in Sources */,
 				9953549620501E3C00522523 /* BaseViewController.m in Sources */,
 				999D8EC52050E8FF00A21863 /* TestViewController.m in Sources */,
 				9953548020501BF500522523 /* AppDelegate.m in Sources */,
+				99AA823E2056595000723E84 /* TableViewViewController.m in Sources */,
 				995354A1205023B800522523 /* PhotoViewController.m in Sources */,
 				9953549920501E6700522523 /* MainViewController.m in Sources */,
 				99087F2E20527A81000423DC /* AutoLayoutViewController.m in Sources */,
 				9953549C20501FC600522523 /* MediaViewController.m in Sources */,
+				99AA824220566E0B00723E84 /* MasTableViewCell.m in Sources */,
 				99087F322052A2D1000423DC /* MasTableViewViewController.m in Sources */,
 				99087F2A205279E4000423DC /* MasDemoViewController.m in Sources */,
 			);

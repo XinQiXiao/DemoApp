@@ -6,14 +6,14 @@
 //  Copyright © 2018年 qixin. All rights reserved.
 //
 
-#import "MasDemoViewController.h"
-#import <Masonry.h>
-#import "Contants.h"
-
 // 定义这个常量，就可以不用在开发过程中使用"mas_"前缀。
 #define MAS_SHORTHAND
 // 定义这个常量，就可以让Masonry帮我们自动把基础数据类型的数据，自动装箱为对象类型。
 #define MAS_SHORTHAND_GLOBALS
+
+#import "MasDemoViewController.h"
+#import <Masonry.h>
+#import "Contants.h"
 
 @interface MasDemoViewController ()
 
@@ -59,21 +59,23 @@
     // 使用基础数据类型当做参数
     // 设置约束优先级
     // 设置约束比例
-    _redView = [UIView new];
-    _redView.backgroundColor = [UIColor redColor];
-    [self.view addSubview:_redView];
-    [self setRedViewUI];
+//    _redView = [UIView new];
+//    _redView.backgroundColor = [UIColor redColor];
+//    [self.view addSubview:_redView];
+//    [self setRedViewUI];
     
-    // 子视图等高
     _blueView = [UIView new];
     _blueView.backgroundColor = [UIColor blueColor];
     [self.view addSubview:_blueView];
-    [self setBlueViewUI];
     //
     _grayView = [UIView new];
-    _grayView.backgroundColor = [UIColor yellowColor];
+    _grayView.backgroundColor = [UIColor grayColor];
     [self.view addSubview:_grayView];
-    [self setGrayViewUI];
+    
+    // 子视图等高
+//    [self setViewEqualHeight];
+    // 子视图居中
+    [self setViewVerticalCenter];
 }
 
 -(void)setYellowUI{
@@ -137,11 +139,54 @@
     }];
 }
 
--(void)setBlueViewUI{
+-(void)setViewEqualHeight{
+    /**
+     下面的例子是通过给equalTo()方法传入一个数组，设置数组中子视图及当前make对应的视图之间等高。 需要注意的是，下面block中设置边距的时候，应该用insets来设置，而不是用offset。 因为用offset设置right和bottom的边距时，这两个值应该是负数，所以如果通过offset来统一设置值会有问题。
+    */
     
+    CGFloat padding = 20.0f;
+    [_redView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.right.equalTo(_yellowView).insets(UIEdgeInsetsMake(padding, padding, 0, padding));
+        
+        make.bottom.equalTo(_blueView.mas_top).offset(-padding);
+        
+    }];
+    
+    [_blueView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(_yellowView).insets(UIEdgeInsetsMake(0, padding, 0, padding));
+        make.bottom.equalTo(_grayView.mas_top).offset(-padding);
+        
+    }];
+    
+    /**
+     下面设置make.height的数组是关键，通过这个数组可以设置这三个视图高度相等。其他例如宽度之类的，也是类似的方式。
+    */
+        
+    [_grayView makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(_yellowView).insets(UIEdgeInsetsMake(0, padding, padding, padding));
+        make.height.equalTo(@[_redView, _blueView]);
+    }];
 }
--(void)setGrayViewUI{
-    
+
+// 垂直居中
+-(void)setViewVerticalCenter{
+    /**
+     要求： 两个视图相对于父视图垂直居中，并且两个视图以及父视图之间的边距均为10，高度为150，两个视图宽度相等。
+    */
+    CGFloat padding = 10.f;
+    [_blueView makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(_yellowView);
+        make.left.equalTo(_yellowView).mas_offset(padding);
+        make.right.equalTo(_grayView.mas_left).mas_offset(-padding);
+        make.width.equalTo(_grayView);
+        make.height.mas_equalTo(150);
+    }];
+    [_grayView makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(_yellowView);
+        make.right.equalTo(_yellowView).mas_offset(-padding);
+        make.width.equalTo(_blueView);
+        make.height.mas_equalTo(150);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
