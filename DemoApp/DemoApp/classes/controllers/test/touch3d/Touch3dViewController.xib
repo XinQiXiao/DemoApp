@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Touch3dViewController">
+            <connections>
+                <outlet property="hasTouchBtn" destination="o54-vP-0Oc" id="xxD-HD-mRh"/>
+                <outlet property="myTextView" destination="P4t-X7-Tcb" id="3fS-op-qKl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o54-vP-0Oc">
+                    <rect key="frame" x="127" y="250" width="120" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="l5c-jb-Sd1"/>
+                        <constraint firstAttribute="width" constant="120" id="sI1-lH-xtv"/>
+                    </constraints>
+                    <state key="normal" title="HasTouchButton"/>
+                    <connections>
+                        <action selector="hasTouchBtnClick:" destination="-1" eventType="touchUpInside" id="otp-ib-3hT"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P4t-X7-Tcb">
+                    <rect key="frame" x="37.5" y="120" width="300" height="100"/>
+                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="7aR-cB-L6v"/>
+                        <constraint firstAttribute="height" constant="100" id="kqE-bu-1Bi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="P4t-X7-Tcb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1BC-zM-Kua"/>
+                <constraint firstItem="P4t-X7-Tcb" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="100" id="6yJ-yU-XgB"/>
+                <constraint firstItem="o54-vP-0Oc" firstAttribute="top" secondItem="P4t-X7-Tcb" secondAttribute="bottom" constant="30" id="SKM-Xh-sYq"/>
+                <constraint firstItem="o54-vP-0Oc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zYe-7Y-1b9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="-349" y="15"/>
+        </view>
+    </objects>
+</document>

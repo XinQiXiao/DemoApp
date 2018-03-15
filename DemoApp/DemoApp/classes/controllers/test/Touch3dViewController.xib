@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Touch3dViewController">
+            <connections>
+                <outlet property="hasTouchLabel" destination="fen-sb-o5x" id="aM6-Hu-fdi"/>
+                <outlet property="noTouchLabel" destination="BPt-dD-U3Q" id="pAC-Cm-o2f"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HasTouchLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fen-sb-o5x">
+                    <rect key="frame" x="112" y="120" width="150" height="30"/>
+                    <color key="backgroundColor" red="0.99602099779999997" green="1" blue="0.2648251552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="7YD-sE-StT"/>
+                        <constraint firstAttribute="height" constant="30" id="QhD-Ln-v91"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NoTouchLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPt-dD-U3Q">
+                    <rect key="frame" x="113" y="180" width="150" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="hbZ-ym-Ly5"/>
+                        <constraint firstAttribute="height" constant="30" id="vcs-EE-e76"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwS-st-MdK">
+                    <rect key="frame" x="127.5" y="320" width="120" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="D9L-ms-sf8"/>
+                        <constraint firstAttribute="height" constant="30" id="hZA-il-HGW"/>
+                    </constraints>
+                    <state key="normal" title="NoTouchButton"/>
+                    <connections>
+                        <action selector="noTouchBtnClick:" destination="-1" eventType="touchUpInside" id="8iU-Nc-aEE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o54-vP-0Oc">
+                    <rect key="frame" x="127" y="260" width="120" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="9O7-gp-Iw3"/>
+                        <constraint firstAttribute="height" constant="30" id="yvI-Ke-QJZ"/>
+                    </constraints>
+                    <state key="normal" title="HasTouchButton"/>
+                    <connections>
+                        <action selector="hasTouchBtnClick:" destination="-1" eventType="touchUpInside" id="otp-ib-3hT"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="BPt-dD-U3Q" firstAttribute="top" secondItem="fen-sb-o5x" secondAttribute="bottom" constant="30" id="N6b-0t-axl"/>
+                <constraint firstItem="o54-vP-0Oc" firstAttribute="top" secondItem="BPt-dD-U3Q" secondAttribute="bottom" constant="50" id="Rg4-Gd-VYf"/>
+                <constraint firstItem="fen-sb-o5x" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SRJ-cz-g1t"/>
+                <constraint firstItem="UwS-st-MdK" firstAttribute="top" secondItem="o54-vP-0Oc" secondAttribute="bottom" constant="30" id="YCk-Nb-P3V"/>
+                <constraint firstItem="o54-vP-0Oc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="b5Z-Ak-67C"/>
+                <constraint firstItem="BPt-dD-U3Q" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bTm-tJ-Mb6"/>
+                <constraint firstItem="UwS-st-MdK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jag-lU-Pix"/>
+                <constraint firstItem="fen-sb-o5x" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="100" id="pAc-TP-9gN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="211" y="-5"/>
+        </view>
+    </objects>
+</document>

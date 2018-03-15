@@ -24,6 +24,10 @@
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:[MainViewController new]];
 
     self.window.rootViewController = nav;
+    
+    // set shortCutItems
+    [self setShortCutItems];
+    
     return YES;
 }
 
@@ -54,5 +58,32 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)application:(UIApplication *)application performActionForShortcutItem:(nonnull UIApplicationShortcutItem *)shortcutItem completionHandler:(nonnull void (^)(BOOL))completionHandler{
+    NSLog(@"shortcutItem type = %@", shortcutItem.type);
+    NSLog(@"shortcutItem userInfo = %@", shortcutItem.userInfo);
+}
 
+
+#pragma mark --- HOME SCRREN  Quick Actions ---
+-(void )setShortCutItems{
+    NSMutableArray *shortCutItems = (NSMutableArray *)[UIApplication sharedApplication].shortcutItems;
+    
+    UIApplicationShortcutItem *shoreItem1 = [[UIApplicationShortcutItem alloc] initWithType:@"cn.qixin.DemoApp.openSearch" localizedTitle:@"搜索" localizedSubtitle:nil icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeSearch] userInfo:nil];
+    [shortCutItems addObject:shoreItem1];
+    
+    UIApplicationShortcutItem *shoreItem2 = [[UIApplicationShortcutItem alloc] initWithType:@"cn.qixin.DemoApp.openCompose" localizedTitle:@"新消息" localizedSubtitle:@"哈哈哈" icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeCompose] userInfo:nil];
+    [shortCutItems addObject:shoreItem2];
+    
+    NSDictionary *locUserInfo = [NSDictionary dictionaryWithObjectsAndKeys:@"120.00", @"lon", nil];
+//    NSDictionary *locUserInfo = @{@"loc_lon": @"160.000"};
+    // TODO 
+    UIApplicationShortcutItem *shoreItem3 = [[UIApplicationShortcutItem alloc] initWithType:@"cn.qixin.DemoApp.openLocation" localizedTitle:@"位置" localizedSubtitle:@"定位中" icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLocation] userInfo:locUserInfo];
+    [shortCutItems addObject:shoreItem3];
+    
+    UIApplicationShortcutItem *shoreItem4 = [[UIApplicationShortcutItem alloc] initWithType:@"cn.qixin.DemoApp.openAdd" localizedTitle:@"添加" localizedSubtitle:@"ceshi" icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeAdd] userInfo:nil];
+    [shortCutItems addObject:shoreItem4];
+    
+    [UIApplication sharedApplication].shortcutItems = shortCutItems;
+}
+#pragma mark --- ---
 @end

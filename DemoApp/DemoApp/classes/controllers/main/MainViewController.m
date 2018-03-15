@@ -6,11 +6,6 @@
 //  Copyright © 2018年 qixin. All rights reserved.
 //
 
-// 定义这个常量，就可以不用在开发过程中使用"mas_"前缀。
-#define MAS_SHORTHAND
-// 定义这个常量，就可以让Masonry帮我们自动把基础数据类型的数据，自动装箱为对象类型。
-#define MAS_SHORTHAND_GLOBALS
-
 #import "MainViewController.h"
 #import "MediaViewController.h"
 #import "PhotoViewController.h"
@@ -20,8 +15,8 @@
 #import "MasTableViewViewController.h"
 #import "TableViewViewController.h"
 #import "Contants.h"
-#import <Masonry.h>
 #import "ScrollViewController.h"
+#import "Touch3dViewController.h"
 
 @interface MainViewController ()
 
@@ -65,6 +60,9 @@
     
     UIButton *scrollBtn = [self createBtn:@"Masonry Scroll" action:@selector(toScrollView)];
     [self setBtnConstraints:scrollBtn topBtn:masTableBtn btnSize:btnSize margin:btnMargin];
+    
+    UIButton *touch3dBtn = [self createBtn:@"3D touch" action:@selector(to3DTouchView)];
+    [self setBtnConstraints:touch3dBtn topBtn:scrollBtn btnSize:btnSize margin:btnMargin];
 }
 
 -(UIButton *)createBtn:(NSString *)title action:(SEL)action{
@@ -111,6 +109,10 @@
 
 -(void)toScrollView{
     [self.navigationController pushViewController:[ScrollViewController new] animated:YES];
+}
+
+-(void)to3DTouchView{
+    [self.navigationController pushViewController:[Touch3dViewController new] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

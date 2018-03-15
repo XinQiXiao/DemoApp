@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3E23CA6A2F667BA1F0F42B17 /* libPods-DemoApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C7934BBCB5113582DFA603 /* libPods-DemoApp.a */; };
+		99078275205A50A000A0BF7F /* Touch3dViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99078273205A50A000A0BF7F /* Touch3dViewController.m */; };
+		99078276205A50A000A0BF7F /* Touch3dViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99078274205A50A000A0BF7F /* Touch3dViewController.xib */; };
+		9907827A205A583300A0BF7F /* TouchInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99078279205A583300A0BF7F /* TouchInfoViewController.m */; };
 		99087F2A205279E4000423DC /* MasDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99087F29205279E4000423DC /* MasDemoViewController.m */; };
 		99087F2E20527A81000423DC /* AutoLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99087F2C20527A81000423DC /* AutoLayoutViewController.m */; };
 		99087F2F20527A81000423DC /* AutoLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99087F2D20527A81000423DC /* AutoLayoutViewController.xib */; };
@@ -29,6 +32,11 @@
 /* Begin PBXFileReference section */
 		08B103A4231A899D5442B72D /* Pods-DemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoApp/Pods-DemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		61C7934BBCB5113582DFA603 /* libPods-DemoApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99078272205A50A000A0BF7F /* Touch3dViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Touch3dViewController.h; sourceTree = "<group>"; };
+		99078273205A50A000A0BF7F /* Touch3dViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Touch3dViewController.m; sourceTree = "<group>"; };
+		99078274205A50A000A0BF7F /* Touch3dViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Touch3dViewController.xib; sourceTree = "<group>"; };
+		99078278205A583300A0BF7F /* TouchInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchInfoViewController.h; sourceTree = "<group>"; };
+		99078279205A583300A0BF7F /* TouchInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchInfoViewController.m; sourceTree = "<group>"; };
 		99087F28205279E4000423DC /* MasDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasDemoViewController.h; sourceTree = "<group>"; };
 		99087F29205279E4000423DC /* MasDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasDemoViewController.m; sourceTree = "<group>"; };
 		99087F2B20527A81000423DC /* AutoLayoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoLayoutViewController.h; sourceTree = "<group>"; };
@@ -90,6 +98,18 @@
 				61C7934BBCB5113582DFA603 /* libPods-DemoApp.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99078277205A57FE00A0BF7F /* touch3d */ = {
+			isa = PBXGroup;
+			children = (
+				99078272205A50A000A0BF7F /* Touch3dViewController.h */,
+				99078273205A50A000A0BF7F /* Touch3dViewController.m */,
+				99078274205A50A000A0BF7F /* Touch3dViewController.xib */,
+				99078278205A583300A0BF7F /* TouchInfoViewController.h */,
+				99078279205A583300A0BF7F /* TouchInfoViewController.m */,
+			);
+			path = touch3d;
 			sourceTree = "<group>";
 		};
 		9953547220501BF400522523 = {
@@ -192,6 +212,7 @@
 		999D8EC22050E8E100A21863 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				99078277205A57FE00A0BF7F /* touch3d */,
 				99AA823F20566C7900723E84 /* masonryTest */,
 				999D8EC32050E8FF00A21863 /* TestViewController.h */,
 				999D8EC42050E8FF00A21863 /* TestViewController.m */,
@@ -283,6 +304,7 @@
 				9953548220501BF500522523 /* Assets.xcassets in Resources */,
 				9953548520501BF500522523 /* LaunchScreen.storyboard in Resources */,
 				99087F2F20527A81000423DC /* AutoLayoutViewController.xib in Resources */,
+				99078276205A50A000A0BF7F /* Touch3dViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,10 +371,12 @@
 				9953549620501E3C00522523 /* BaseViewController.m in Sources */,
 				999D8EC52050E8FF00A21863 /* TestViewController.m in Sources */,
 				9953548020501BF500522523 /* AppDelegate.m in Sources */,
+				9907827A205A583300A0BF7F /* TouchInfoViewController.m in Sources */,
 				99AA823E2056595000723E84 /* TableViewViewController.m in Sources */,
 				995354A1205023B800522523 /* PhotoViewController.m in Sources */,
 				9953549920501E6700522523 /* MainViewController.m in Sources */,
 				99087F2E20527A81000423DC /* AutoLayoutViewController.m in Sources */,
+				99078275205A50A000A0BF7F /* Touch3dViewController.m in Sources */,
 				9953549C20501FC600522523 /* MediaViewController.m in Sources */,
 				99AA824220566E0B00723E84 /* MasTableViewCell.m in Sources */,
 				99087F322052A2D1000423DC /* MasTableViewViewController.m in Sources */,
